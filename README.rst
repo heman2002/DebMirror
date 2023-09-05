@@ -38,6 +38,7 @@ debmirror
 
 
 INSTRUCTIONS
+====
 
 Debian uses *deb packages to deploy and upgrade software. The packages are stored in repositories and each repository contains the so called "Contents index". The format of that file is well described here https://wiki.debian.org/RepositoryFormat#A.22Contents.22_indices
 
@@ -61,6 +62,7 @@ Please do your work in a local Git repository. Your repo should contain a README
 Note: We are interested not only in quality code, but also in seeing your approach to the problem and how you organize your work.
 
 SETUP
+====
 
 After cd-ing into your new project and creating (or activating) an isolated development environment (with virtualenv, conda or your preferred tool), you can do the usual editable install:
 
@@ -69,23 +71,29 @@ pip install -e .
 We also recommend using tox, so you can take advantage of the automation tasks we have setup for you, like:
 
 tox -e build  # to build package distribution
+
 tox -e publish  # to test project uploads correctly in test.pypi.org
+
 tox -e publish -- --repository pypi  # to release package to PyPI
+
 tox -av  # to list all the tasks available
 
 USAGE
+====
 
 The following command can be executed to run the program.
 
 python -m debmirror.py <arguments>
 
 EXAMPLE
+====
 
 Below is an example command to execute the code.
 
 python3 debmirror.py amd64 -o ../Desktop/ -u
 
 CLI ARGUMENTS
+====
 
 The list below describes all the arguments that can be passed to the CLI.
 usage: python3 debmirror.py [-h] [-m MIRROR_URL] [-u] [-o OUTPUT_DIR] arch
@@ -104,6 +112,7 @@ options:
                         output directory for files to be stored, DEFAULT current directory
 
 TESTING
+====
 
 The command below can be used to execute the test cases.
 
